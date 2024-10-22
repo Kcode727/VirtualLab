@@ -1,0 +1,132 @@
+footer {
+    width: 100vw;
+    background-color: #02263c;
+    color: white;
+    padding: 3px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .footer-head {
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    padding-top: 20px;
+  }
+  
+  footer li,
+  a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 20px;
+  }
+  
+  footer p {
+    padding-top: 10px;
+    padding-left: 40%;
+    font-size: 17px;
+  }
+/* for MQ of footer  */
+footer {
+    width: 100vw;
+    background-color: #02263c;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 0;
+  }
+  
+  .footer-head {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    flex-wrap: wrap; /* To handle responsiveness */
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer li,
+  a {
+    color: white;
+    text-decoration: none;
+    padding-bottom: 10px;
+    display: block;
+  }
+  
+  footer p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  
+  /* Flexbox columns for each section */
+  .foot-one,
+  .foot-two,
+  .foot-three {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px; 
+  }
+  
+  @media (max-width: 768px) {
+    .footer-head {
+        width: 90vw;
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .foot-one,
+    .foot-two,
+    .foot-three {
+        margin: 20px 0;
+    }
+  
+    footer p {
+        font-size: 14px;
+    }
+  }
+  
+  /* For mobile devices (width <= 480px) */
+  @media (max-width: 480px) {
+    .footer-head {
+        width: 95vw;
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .foot-one,
+    .foot-two,
+    .foot-three {
+        margin: 15px 0;
+    }
+  
+    footer p {
+        font-size: 13px;
+    }
+  }
+  
+  /* For very small mobile devices (width <= 320px) */
+  @media (max-width: 320px) {
+    .footer-head {
+        width: 100vw;
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    footer p {
+        font-size: 12px;
+    }
+  
+    .foot-one,
+    .foot-two,
+    .foot-three {
+        margin: 10px 0;
+    }
+  }
+  

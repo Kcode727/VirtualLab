@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import About from './Component/About/About.js';
+// import Contact from './Component/Contact/Contact.js';
+ import Experiments from './Component/Experiment/Experiments.js'; 
+ import FeedbackForm from './Component/Feedback/Feedback.js'; 
+// import MergeSort from './Component/List/MergeSort.js'; 
+// import LinkedList from './Component/List/LinkedList.js'; 
+// import Stack from './Component/List/Stack.js'; 
+// import Probing from './Component/List/Probing.js'; 
+import Home from './Home';
+import './index.css'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/experiments" element={<Experiments />} />
+      <Route path="/feedback/feedback-form" element={<FeedbackForm />} />
+      {/* <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/list/merge" element={<MergeSort />} />
+      <Route path="/list/linkedlist" element={<LinkedList />} />
+      <Route path="/list/stack" element={<Stack />} />
+      <Route path="/list/probing" element={<Probing />} /> */}
+    </Routes>
+  </Router>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
